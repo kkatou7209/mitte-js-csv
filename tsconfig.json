@@ -32,5 +32,6 @@
 			"@/*": ["*"]
 		}
 	},
-	"include": ["lib/**/*"]
+	"include": ["lib/**/*"],
+	"exclude": ["**/*.spec.ts", "node_modules", "dist"],
 }
