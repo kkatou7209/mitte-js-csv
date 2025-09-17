@@ -2,10 +2,9 @@ logs
 *.log
 
 node_modules
+/coverage/
 dist
 *.local
 
 .vscode/*
 !.vscode/extensions.json
-
-coverage
