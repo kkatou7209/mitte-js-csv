@@ -1,0 +1,15 @@
+name: "mitte-js-csv"
+
+services:
+  node:
+    container_name: "mitte-js-csv-node"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/workspace
+      - mitte-js-cev-node_modules:/workspace/node_modules
+    tty: true
+
+volumes:
+  mitte-js-cev-node_modules:

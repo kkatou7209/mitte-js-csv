@@ -1,0 +1,41 @@
+{
+  "name": "@mitte/csv",
+  "private": false,
+  "version": "1.0.4",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "directory": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkatou7209/mitte-js.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias && rolldown -c rolldown.config.ts -o dist/index.mjs -m",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@vitest/coverage-v8": "3.2.4",
+    "rolldown": "^1.0.0-beta.37",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
